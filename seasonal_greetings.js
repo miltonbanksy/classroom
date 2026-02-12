@@ -20,8 +20,8 @@ const seasonal_greetings = [
     {
         "name": "Seollal / Lunar New Year", 
         "greeting1": "💮 새해 복 많이 받으세요 ",
-        "greeting2": "New year blessings and fortune to you!",
-        "greeting3": "Teacher Steve"
+        "greeting2": "New year blessings and fortune to you!\n\tET-Phone re-opens on Thursday, February 19.",
+        "greeting3": "\n\t\n\tTeacher Steve"
     },
     {
         "name": "Chuseok", 
