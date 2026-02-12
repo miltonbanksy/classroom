@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="classroom-timer.css"> -->
+
+  <title>Classroom Assistant</title>
+  <style></style>
+</head>
+
+<body>
+  <div class="title_container">
+    <h1 id="label_title" class="glide-text">📚 Classroom Assistant</h1>
+    <h1 id="saved_text" class="saved-text">Copied!</h1>
+  </div>
+
+  <br><br>
+
+  <button id="btn-mic-test-prompt">Mic Test Prompt</button>
+  <div id="display-mic-test-prompt"></div>
+  <button id="btn_messages">Messages</button>
+  <button id="btn_reports">Reports</button>
+  <br><br>
+
+  <h2 id="label_prompts" class="glide-text">Feedback Prompts</h2>
+  <div id="dropdowns"></div>
+
+  <p id="display_text" style="white-space: pre-line; margin-top: 20px;"></p>
+  
+  <hr>
+  
+  <h2>Quick Greeting for Dynalist</h2>
+  
+  <div id="frame-display-text">
+    <pre id="display_greeting">A greeting will appear here...</pre>
+  </div>
+
+  <select id="select-greeting"></select>
+
+  <button id="btn-refresh-greeting">Refresh</button>
+  
+  <hr>
+  
+  <h2>Links</h2>
+  <ul>
+    <li><a href="https://www.grammarly.com/ai-detector?utm_source=google&utm_medium=cpc&utm_campaign=21545299326&utm_content=709794462185&utm_term=was%20this%20written%20by%20ai&target=&targetid=kwd-2040666223843&adgroup=162498232781&device=c&matchtype=b&placement=&network=g&extension=&clickid=CjwKCAiAmKnKBhBrEiwAaqAnZ7bvZtdnP7E32eWvsQqOL61Vj7BeXWbIy5tA5kXfBnsQ4E7klU9r6hoCh5cQAvD_BwE&gclsrc=aw.ds&gad_source=1&gad_campaignid=21545299326&gbraid=0AAAAADkCrf9_puhjX-qBkdmK0y9JT7ND6&gclid=CjwKCAiAmKnKBhBrEiwAaqAnZ7bvZtdnP7E32eWvsQqOL61Vj7BeXWbIy5tA5kXfBnsQ4E7klU9r6hoCh5cQAvD_BwE">Grammarly AI Checker </a></li>
+  </ul>
+  <hr>
+  <h2>Recommended Reading</h2>
+  <ul>
+    <li>Grammar for Dummies</li>
+  </ul>
+
+  <h2>Recommended Listening</h2>
+  <ul>
+    <li>BBC Global News Podcasts <a href="https://www.bbc.co.uk/programmes/p02nq0gn/episodes/downloads">BBC Global News Podcasts</a></li>
+    <li>Librivox Free Audiobooks <a href="https://librivox.org/">Librivox Audiobooks</a></li>
+    
+  </ul>
+  
+  <script defer src="feedback_prompts.js"></script>
+  <script defer src="seasonal_greetings.js"></script>
+  <script defer src="script.js"></script>
+  
+  <!-- <script src="classroom-timer.js"></script> -->
+  
+</body>
+</html>

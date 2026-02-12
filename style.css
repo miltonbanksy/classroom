@@ -1,0 +1,159 @@
+html {
+  max-width: 400px;
+  padding: 20px;
+  font-size: 12px;
+  background-color: aliceblue;
+}
+
+h1 {
+  color: rgb(32, 46, 59);
+}
+
+div {
+  font-size: 12px;
+  animation-timing-function:ease;
+}
+
+#display-mic-test-prompt {
+  position: fixed;
+  top: 50%;
+  font-size: 200px;
+}
+
+.popupFrame {
+  position: fixed;
+  padding: 20px;
+  background-color: wheat;
+  border: 1px solid black;
+  border-radius: 20px;
+  box-shadow: 2px 2px 50px black;
+  font-size: 30px;
+}
+
+.bgd-xmas {
+  background-image: url("bgd_xmas1.jpg");
+  background-repeat: no-repeat;                 /* Prevent image tiling */
+  background-position: center;                 /* Center the image within the div */
+  background-size: cover;                      /* Scale the image to cover the entire container */
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.bgd-fireworks {
+  background-image: url("bgd_fireworks.jpg");
+  background-repeat: no-repeat;                 /* Prevent image tiling */
+  background-position: center;                 /* Center the image within the div */
+  background-size: cover;                      /* Scale the image to cover the entire container */
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+button {
+  padding: 4px;
+  margin: 2px;
+  background-color: coral;
+  font-size: 14px;
+  color: white;
+  border-radius: 8px;
+}
+
+.button-red {
+  background-color: crimson;
+  color: white;
+}
+
+select {
+  font-size: 15px;
+  width: 150px;
+}
+
+#label_copied {
+  color: rgb(163, 255, 255);
+  font-size: 40px;
+}
+
+.title_container {
+  position: relative;
+  overflow: hidden;
+  height: 3em; /* enough room for both */
+  background-color: coral;
+  border-radius: 10px;
+}
+
+/* Position both stacked */
+.title_container h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+/* Title starts visible */
+#label_title {
+  opacity: 1;
+  animation-timing-function:ease;
+}
+
+/* Saved starts invisible */
+#saved_text {
+  opacity: 0;
+  color: green;
+  animation-timing-function:ease;
+}
+
+/* Animations */
+@keyframes flyOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to   { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes flyInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes flyOutLeft {
+  from { transform: translateX(0); opacity: 1; }
+  to   { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes flyInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+
+/* Classes to trigger animations */
+.fly-out-right {
+  animation: flyOutRight 0.8s forwards;
+  animation-timing-function:ease;
+}
+
+.saved-in-left {
+  animation: flyInLeft 0.8s forwards; /* orig 0.8 */
+  animation-timing-function:ease;
+}
+
+.saved-out-left {
+  animation: flyOutLeft 0.8s forwards; /* orig 0.8 */
+  animation-timing-function:ease;
+}
+
+.title-in-right {
+  animation: flyInRight 0.8s forwards; /* orig 0.8 */
+  animation-timing-function:ease;
+}
+
+.hide-me {
+  visibility: hidden;
+}
+
+.show-me {
+  visibility: visible;
+}

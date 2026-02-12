@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Timer</title>
+    <link rel="icon" type="image/png" id="favicon">
+    <!-- <link rel="stylesheet" href="classroom-timer.css"> -->
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Setup View -->
+        <div class="setup-view active">
+            <h1>⏱️ Classroom Timer</h1>
+            
+            <div class="quick-times">
+                <button class="quick-time-btn" onclick="setQuickTime(10, 0)">10 min</button>
+                <button class="quick-time-btn" onclick="setQuickTime(20, 0)">20 min</button>
+                <button class="quick-time-btn" onclick="setQuickTime(30, 0)">30 min</button>
+            </div>
+
+            <div class="input-group">
+                <label for="minutes">Minutes:</label>
+                <input type="number" id="minutes" min="0" max="99" value="20">
+            </div>
+            <div class="input-group">
+                <label for="seconds">Seconds:</label>
+                <input type="number" id="seconds" min="0" max="59" value="0">
+            </div>
+            <div class="button-group">
+                <button id="startBtn" onclick="startTimer()">Start Timer</button>
+            </div>
+        </div>
+
+        <!-- Timer View -->
+        <div class="timer-view">
+            <div class="timer-display" id="display">20:00</div>
+            <div class="status" id="status">Running...</div>
+            <div class="button-group">
+                <button id="pauseBtn" onclick="togglePause()">Pause</button>
+                <button onclick="addTime(60)">+1 min</button>
+                <button onclick="resetTimer()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="classroom-timer2.js"></script>
+</body>
+</html>

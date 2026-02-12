@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    user-select: none;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-display {
+    font-size: 96px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.input-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-group label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100px;
+    padding: 12px;
+    font-size: 24px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.input-group input:focus {
+    outline: 3px solid #fff;
+}
+
+.button-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    min-width: 120px;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.status {
+    font-size: 18px;
+    margin-top: 15px;
+    opacity: 0.9;
+    min-height: 25px;
+}
+
+.setup-view, .timer-view {
+    display: none;
+}
+
+.setup-view.active, .timer-view.active {
+    display: block;
+}
+
+.quick-times {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-time-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    min-width: 80px;
+}
+
+.quick-time-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 600px) {
+    .timer-display {
+        font-size: 72px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
